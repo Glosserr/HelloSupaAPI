@@ -4,25 +4,31 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 async function getBooks() {
-  try {
-    let { data: books, error } = await supabase
-      .from('books')
-      .select('*')
-    
-    if (error) {
-      console.error('Error fetching books:', error);
-      return;
+    try {
+      let { data: books, error } = await supabase
+        .from('books')
+        .select('*');
+      
+      if (error) {
+        console.error('Error fetching books:', error);
+        return;
+      }
+      
+      const booksBody = document.getElementById('booksBody');
+      
+      books.forEach(book => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td>${book.isbn}</td>
+        `;
+        booksBody.appendChild(row);
+      });
+    } catch (err) {
+      console.error("Error in getBooks function:", err);
     }
-    
-    const bookList = document.getElementById('books');
-    
-    for (let book of books) {
-      bookList.innerHTML += `<li>${book.title} - ${book.author} - ${book.isbn}</li>`;
-    }
-  } catch (err) {
-    console.error("Error in getBooks function:", err);
   }
-}
 // Option 3: Call it directly (like in CodePen)
 // Only do this if the script is loaded at the end of your HTML
 getBooks();

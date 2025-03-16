@@ -1,3 +1,4 @@
+/* General Page Styling */
 body {
     font-family: "Garamond", serif; /* Classic serif font for an old-world feel */
     color: #5C5C5C; /* Muted gray for readability */
@@ -18,41 +19,53 @@ h1 strong {
     color: #8B5E3C; /* Rich brown for contrast */
 }
 
-nav {
-    display: none; /* Navigation is hidden */
+h2, h3 {
+    color: #2C3E3A; /* Keeping a deep green color for consistency */
 }
 
-.content-list {
+/* Table Styling */
+.content-table {
     margin: 30px auto;
-    max-width: 600px;
-    text-align: left;
-    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    border-collapse: collapse;
     background: #D8C3A5; /* Soft, aged light brown */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    list-style-type: none;
     border: 2px solid #2C3E3A; /* Forest green border for structure */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden; /* Ensures border-radius applies */
 }
 
-.content-list li {
-    padding: 12px;
-    margin: 10px 0;
+.content-table th, .content-table td {
+    padding: 15px;
+    text-align: left;
     border-bottom: 1px solid #A09E9A; /* Muted gray separator */
-    transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.content-list li:hover {
-    transform: translateX(5px);
+.content-table th {
+    background: #2C3E3A; /* Deep forest green for contrast */
+    color: #F5ECE0; /* Light parchment-like text */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.content-table tbody tr:nth-child(even) {
+    background: rgba(139, 94, 60, 0.2); /* Subtle brown tint for even rows */
+}
+
+.content-table tbody tr:hover {
     background: rgba(44, 62, 58, 0.2); /* Subtle green tint on hover */
-    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
+/* Book Info Text */
 .book-info {
     font-weight: bold;
     color: #2C3E3A; /* Deep forest green for prominence */
     font-size: 1.1em;
 }
 
+/* Image Styling */
 img.about {
     opacity: 0.7; /* Aged effect */
     border-radius: 5px;

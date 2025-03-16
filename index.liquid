@@ -7,6 +7,15 @@ title: BooksGetter
 <h2>List of Favorites</h2>
 <h3>In NO particular order</h3>
 <script>getBooks();</script>
-<ul id="books" class="content-list">
-  <!-- Books will be loaded here -->
-</ul>
+<table id="booksTable" class="content-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+      </tr>
+    </thead>
+    <tbody id="booksBody">
+      <!-- Books will be loaded here -->
+    </tbody>
+  </table>
