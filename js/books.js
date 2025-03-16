@@ -23,5 +23,6 @@ async function getBooks() {
     console.error("Error in getBooks function:", err);
   }
 }
-
+// Option 3: Call it directly (like in CodePen)
+// Only do this if the script is loaded at the end of your HTML
 getBooks();
