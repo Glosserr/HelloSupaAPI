@@ -15,10 +15,6 @@ async function getBooks() {
     }
     
     const bookList = document.getElementById('books');
-    if (!bookList) {
-      console.error("Element with ID 'books' not found");
-      return;
-    }
     
     for (let book of books) {
       bookList.innerHTML += `<li>${book.title} - ${book.author} - ${book.isbn}</li>`;
@@ -28,12 +24,4 @@ async function getBooks() {
   }
 }
 
-// Option 1: Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', getBooks);
-
-// Option 2: Make the function available globally
-window.getBooks = getBooks;
-
-// Option 3: Call it directly (like in CodePen)
-// Only do this if the script is loaded at the end of your HTML
 getBooks();

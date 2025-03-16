@@ -1,75 +1,60 @@
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
+    font-family: "Garamond", serif; /* Classic serif font for an old-world feel */
+    color: #5C5C5C; /* Muted gray for readability */
+    background: #F5ECE0; /* Light brown parchment-like background */
+    padding: 40px;
     text-align: center;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
 h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+    font-size: 4em;
+    letter-spacing: -1px;
+    color: #2C3E3A; /* Deep forest green for a strong presence */
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #8B5E3C; /* Rich brown for contrast */
 }
 
-img.about {
-    opacity: 0.5;
+nav {
+    display: none; /* Navigation is hidden */
 }
 
-/* Content list styling */
 .content-list {
     margin: 30px auto;
     max-width: 600px;
     text-align: left;
     padding: 20px;
-    background: #212431;
+    background: #D8C3A5; /* Soft, aged light brown */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     list-style-type: none;
+    border: 2px solid #2C3E3A; /* Forest green border for structure */
 }
 
 .content-list li {
     padding: 12px;
     margin: 10px 0;
-    border-bottom: 1px solid #3D4257;
-    transition: transform 0.2s ease;
+    border-bottom: 1px solid #A09E9A; /* Muted gray separator */
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .content-list li:hover {
     transform: translateX(5px);
-    background: rgba(34,193,195,0.1);
+    background: rgba(44, 62, 58, 0.2); /* Subtle green tint on hover */
     border-radius: 5px;
+}
+
+.book-info {
+    font-weight: bold;
+    color: #2C3E3A; /* Deep forest green for prominence */
+    font-size: 1.1em;
+}
+
+img.about {
+    opacity: 0.7; /* Aged effect */
+    border-radius: 5px;
+    border: 2px solid #8B5E3C; /* Brown border to frame images */
 }
